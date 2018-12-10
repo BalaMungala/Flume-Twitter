@@ -11,3 +11,5 @@ STEPS:
  7) Connecting Sink and Channel
  8) Run the command to start streaming the data
  9) Enjoy the flow of data
+ 
+    NOTE: Please Read "github-Flume.docx" before running the code and also refer "Flume-Architecture.png" to understand configuration
