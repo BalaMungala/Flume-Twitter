@@ -1,0 +1,46 @@
+ 
+
+###Create TwitterAgent
+
+TwitterAgent.sources=Twitter
+
+TwitterAgent.sinks=HDFS
+
+TwitterAgent.channels=Memorychannel
+
+###Configure source - Twitter
+
+#To get details of consumerkey,consumersecret,accessToken,accessTokenSecret,check in the "README"
+
+TwitterAgent.sources.Twitter.type=org.apache.flume.source.twitter.TwitterSource
+
+TwitterAgent.sources.Twitter.consumerKey=
+TwitterAgent.sources.Twitter.consumerSecret=
+TwitterAgent.sources.Twitter.accessToken=
+TwitterAgent.sources.Twitter.accessTokenSecret=
+
+
+###Configure sink - HDFS
+
+TwitterAgent.sinks.HDFS.type=hdfs
+
+TwitterAgent.sinks.HDFS.hdfs.path=<path of hdfs>
+TwitterAgent.sinks.HDFS.hdfs.fileType=DataStream
+
+TwitterAgent.sinks.HDFS.hdfs.writeFormat=Text
+
+TwitterAgent.sinks.HDFS.hdfs.batchSize=1000
+
+###Configure channel - memory/file
+
+TwitterAgent.channels.Memorychannel.type=memory 
+
+TwitterAgent.channels.Memorychannel.capacity=10000
+
+TwitterAgent.channels.Memorychannel.transactionCapacity=100
+
+###Connect source to channel and sink to channel
+
+TwitterAgent.sources.Twitter.channels=Memorychannel
+
+TwitterAgent.sinks.HDFS.channel=Memorychannel
