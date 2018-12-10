@@ -1,5 +1,6 @@
 # Flume--Twitter-Live-Data
 Streaming the live data from Twitter to HDFS using Flume
+
 STEPS:
  1) Twitter-App Creation
  2) Twitter-Agent Creation
