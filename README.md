@@ -13,3 +13,6 @@ STEPS:
  9) Enjoy the flow of data
  
     NOTE: Please Read "github-Flume.docx" before running the code and also refer "Flume-Architecture.png" to understand configuration
+    
+    
+    ![](https://github.com/BalaMungala/Flume-Twitter/blob/master/Flume-Architecture.png)
